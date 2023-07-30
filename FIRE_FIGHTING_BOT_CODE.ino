@@ -4,8 +4,6 @@
 Servo myservo;
  
 int pos = 0;    
-// bool fire = false;
-
 
 // Pin Definitions
 #define in1 6 
@@ -105,7 +103,6 @@ void loop()
       }
     digitalWrite(pump, HIGH);
     Serial.println("Fire and pump turned off ");
-   // put_of_fire();
   }
   else if(flameSensorValue_Right == LOW)
   {
@@ -134,27 +131,3 @@ void loop()
   delay(400);
 
 }
-/*void put_of_fire()
-{
-    digitalWrite(in1, LOW);
-    digitalWrite(in2, LOW);
-    digitalWrite(in3, LOW);
-    digitalWrite(in4, LOW);
-    digitalWrite(pump, LOW);
-    delay(2000);
-
-     for (pos = 50; pos <= 110; pos += 1) 0
-      { 
-          myservo.write(pos); 
-           delay(10);  
-       }
-      for (pos = 110; pos >= 50; pos -= 1)
-      { 
-            myservo.write(pos); 
-            delay(10);
-      }
- /*   digitalWrite(pump, HIGH);
-    //myservo.write(90); 
-    fire=false;
-    Serial.println("Fire turned off!");
-}*/
